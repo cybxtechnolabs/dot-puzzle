@@ -1,0 +1,41 @@
+.wrapper {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+.top-notch{
+    width:100px;
+    margin:auto;
+}
+.text-box{
+    width: 100px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #b8b8b8;
+    padding: 5px;
+}
+.bottom-notch {
+    width: 400px;
+    position: absolute;
+    bottom:0;
+}
+.bottom-left {
+    width: 100px;
+    float: left;
+}
+.bottom-right {
+    width: 100px;
+    float: right;
+}
+.middle-dot {
+    width:40px;
+    position: absolute;
+    left: 190px;
+    top: 190px;
+}
+.dot {
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background: #dddddd;
+}

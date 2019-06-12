@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="top-notch">
+        <input type="number" [(ngModel)]="valueTop" class="text-box"/>
+        <ng5-slider [(value)]="valueTop" [options]="sliderOption"></ng5-slider>
+    </div>
+    <div class="middle-dot" [ngStyle]="{'top.px': 190 - valueTop, 'left.px': 190 - valueBottomLeft + valueBottomRight}">
+        <div class="dot" [ngStyle]="{'background': 'rgba(' + (255 - (valueTop < 10 ? 50 : valueTop)) +',' + (255 - (valueBottomLeft < 10 ? 50 : valueBottomLeft)) + ',' + (255 - (valueBottomRight < 10 ? 50 : valueBottomRight)) +', 1)'}"></div>
+    </div>
+    <div class="bottom-notch">
+        <div class="bottom-left">
+            <ng5-slider [(value)]="valueBottomLeft" [options]="sliderOption"></ng5-slider>
+            <input type="number" [(ngModel)]="valueBottomLeft" class="text-box"/>
+        </div>
+        <div class="bottom-right">
+            <ng5-slider [(value)]="valueBottomRight" [options]="sliderOption"></ng5-slider>
+            <input type="number" [(ngModel)]="valueBottomRight" class="text-box"/>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
